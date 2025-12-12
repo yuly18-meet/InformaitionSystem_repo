@@ -3,6 +3,7 @@ import re
 from datetime import datetime
 app = Flask(__name__)
 @app.route('/')
+
 def homepage():
     return render_template("home_page.html")
 
@@ -37,3 +38,5 @@ def checking_validation(text):
     if not text:
         return False
     return bool(re.fullmatch(r'[A-Za-z ]+', text))
+
+print("hello world")
